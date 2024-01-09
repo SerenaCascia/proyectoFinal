@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edita tu album</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="profile">
+      <img src="" alt="foto_de_perfil">
+      <span>Usuario</span>
+      </div>
+      <!-- menu -->
+      <div> 
+          <ul>
+          <li><a href="../index.html">Otros albums</a></li>
+          <li> <a href="../editarAlbum/editarAlbum.html">Editar album</a></li>
+          <li> <a href="#">Añadir canciones</a></li>
+          <li> <a href="../logIn/logIn.html" target="_blank">Log Out</a></li>
+          </ul>
+          </div>
+  </div>  
+    <div class="base">
+      <form class="formularios" action="" method="">
+        <h2>Añadir canciones</h2>
+        <label
+          >Titulo de la cancion:
+          <input
+            class="input"
+            type="text"
+            name="nombre_del_album"
+            placeholder="Ingresa el nombre del album"
+            required /></label
+        ><br />
+        <label
+          >Duracion:
+          <input
+          class="input"
+            type="number"
+            name="duracion_de_la_cancion"
+            placeholder="Ingresa la duracion de la cancion"
+            required /></label
+        ><br />
+        <label
+          >Link para escucharla:
+          <input
+          class="input"
+            type="url"
+            name="foto_del_disco"
+            placeholder="Ingresar la url para escucharla"
+            required /></label
+        ><br />
+        <button type="submit">Guardar</button> <br> <button type="reset">Cancelar</button>
+      </form>
+    </div>
+  </body>
+</html>

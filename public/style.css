@@ -1,0 +1,253 @@
+body {
+    font-family: emilia;
+}
+h1{
+    font-family: titulo;
+}
+
+.secciones {
+    border:2px solid #54524F;
+    border-radius: 15px;
+    background-color: #B7B5B3;
+    padding: 20px;
+    font-size: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+#disco {
+    height: 250px;
+    width: auto;
+
+}
+@font-face {
+    font-family: emilia;
+    src: url(./fuentes/Retron2000.ttf);
+}
+@font-face {
+    font-family: titulo;
+    src: url(./fuentes/INVASION2000.TTF);
+}
+h1{
+    font-size: 100px;
+    color: black;
+}
+ol {
+    list-style-position: inside;
+    line-height: 45px;
+}
+.escuchar {
+    background-color:#54524F;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+.escuchar:hover {
+    background-color: #EB1C24;
+}
+.input {
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    margin-top: 0.8em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border: 2px solid #da2f8d;
+    box-shadow: 0px 0px 0px 7px rgb(192, 34, 122, 20%);
+    background-color: white;
+  }
+  #fondoRegistro{
+    background-image: url(./imagenes/1.jpg);
+    background-size: cover;
+}
+
+.positionRelative{
+    width: 25%;
+    position: relative;
+    top: 30px;
+    left: 10%;   
+}
+.cajaEstiloRetro{
+    text-align: center;
+    --bg-color: #fff;
+    --main-color: #901f5d;
+    padding: 20px;
+    background: #feecef;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+.formularios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    text-align: left;
+}
+
+button {
+    --primary-color: #da2f8d;
+    --secondary-color: #fff;
+    --hover-color: #901f5d;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+  
+/* estilos login */
+
+#fondoLogin{
+    background-image: url(./imagenes/fondoLogin.jpg)
+}
+
+a:active{
+    color: #901f5d;
+}
+
+/* estilos home */
+
+*{
+     margin: 0;
+    box-sizing: border-box;   
+}
+
+.base{
+padding-top: 10px;
+ padding-left: 220px;
+}
+
+#containerAlbums{
+    display: flex;
+    justify-content:flex-start;
+
+}
+.album{
+    padding: 10px 20px;
+}
+.album p{
+    text-align: center;
+}
+
+.fijoArriba{
+    position: relative;
+    bottom: 160px;
+    left: 15px;
+}
+.errorContraseña{
+    color: red;
+    font-size: small;
+}
+
+/* navebar */
+.navbar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #901f5d;
+    padding-top:  5%;
+    color: rgba(248, 221, 236, .9);
+  }
+
+.navbar ul li{
+    
+    padding: 15px 10px;
+    list-style: none;
+}
+.navbar a:link,.navbar a:visited,.navbar a:active{
+    text-decoration: none;
+    color: rgba(248, 221, 236, .9);
+}
+
+/* estilo tour */
+#fondoTour{
+    padding: 5%;
+}
+#headerTour{
+    display: flex;
+    
+}
+#headerTour h1{
+    color:#da2f8d;
+    padding-left: 10%;
+}
+.fechas{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 6%;
+    /* margin-bottom: 10px; */
+    align-items: center;;
+}
+.fechas a{
+    text-decoration: none;
+}
+.fechas:hover{
+    background-color:#F5CCE2;
+    border-radius: 10px;
+}
+.botonDeshabilitado{
+    background-color: rgba(0, 0, 0, 0.43);
+}

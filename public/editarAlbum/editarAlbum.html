@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edita tu album</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="profile">
+      <img src="" alt="foto_de_perfil">
+      <span>Usuario</span>
+      </div>
+      <!-- menu -->
+      <div> 
+          <ul>
+          <li><a href="../index.html">Otros albums</a></li>
+          <li> <a href="#">Editar album</a></li>
+          <li> <a href="../agregarCanciones/agregarCanciones.html">Añadir canciones</a></li>
+          <li> <a href="../logIn/logIn.html" target="_blank">Log Out</a></li>
+          </ul>
+          </div>
+  </div>  
+    <div class="base">
+      <form class="formularios" action="" method="">
+        <h2>Editar Album</h2>
+        <label
+          >Nombre del album:
+          <input
+            class="input"
+            type="text"
+            name="nombre_del_album"
+            placeholder="Ingresa el nombre del album"
+            required /></label
+        ><br />
+        <textarea
+        class="input"
+          name="descripcion_del_album"
+          id="descripcion_del_album"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <br />
+        <label
+          >Portada del album:
+          <input
+          class="input"
+            type="url"
+            name="foto_del_disco"
+            placeholder="Ingresar la url de la imagen"
+            required /></label
+        ><br />
+        <div class="botones">
+        <button type="submit">Editar</button> <br> <button type="reset">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
