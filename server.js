@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const routes= require("./routes/index");
 const mongoose=require('mongoose');
+const user=require('./models/user');
+const album=require('./models/album');
+
 
 const url='mongodb+srv://SerenaCascia:39668145@curso-intro.jw2pjxq.mongodb.net/?retryWrites=true&w=majority';
 
