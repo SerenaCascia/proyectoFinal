@@ -64,7 +64,7 @@ router.put('/user/:id',async(req,res)=>{
 
 // mostrar los albums
 
-router.get('/band',async(req,res)=>{
+router.get('/band/todos',async(req,res)=>{
     try{
        const albums= await album.find()
         if(albums.length>0){
@@ -80,10 +80,10 @@ router.get('/band',async(req,res)=>{
 
 // mostrar un album especifico
 
-router.get('/band/:titulo',async(req,res)=>{
+router.get('/band/:id',async(req,res)=>{
     try{
-       const album_especifico= await album.find({titulo:req.params.titulo})
-        if(album_especifico.length>0){
+       const album_especifico= await album.findById(req.params.id)
+        if(album_especifico){
             res.status(201).send(album_especifico)
         }else{
         res.status(500).send('No hay un album con ese nombre')   

@@ -21,7 +21,8 @@ const album = new mongoose.Schema({
         min:[1,'Debe ser mayor a 0']},
     canciones:[{
         titulo:{type:String},
-        duracion:{type:Number},
+        duracion:{type:String},
+        link: {type: String}
     }],
     portada:{type:String}
 })

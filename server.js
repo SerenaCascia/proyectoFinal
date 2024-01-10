@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require("path");
 const routes= require("./routes/index");
 const mongoose=require('mongoose');
 const user=require('./models/user');
@@ -10,7 +11,7 @@ const url='mongodb+srv://SerenaCascia:39668145@curso-intro.jw2pjxq.mongodb.net/?
 
 
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, "public")));
 app.use('/', routes);
 
 const connectToMongo= async() =>{
