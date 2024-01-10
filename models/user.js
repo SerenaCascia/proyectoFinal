@@ -5,20 +5,20 @@ const validator = require('validator');
 const user = new mongoose.Schema({
     nombre:{
         type:String,
-        require:[true,'Este campo es requerido'],
+        required:[true,'Este campo es requerido'],
         lowercase:true,
         trim: true,
-        min: [ 2, 'El nombre debe contener 3 o más caracteres' ],
+        min: [ 2, 'El nombre debe contener 3 o más caracteres' ]
         },
     apellido:{type:String,
-            require:[true,'Este campo es requerido'],
+            required:[true,'Este campo es requerido'],
             lowercase:true,
             trim: true,
-            min: [ 2, 'El nombre debe contener 3 o más caracteres' ],
+            min: [ 2, 'El nombre debe contener 3 o más caracteres' ]
         },
     email:{
         type:String,
-        require:[true,'Este campo es requerido'],
+        required:[true,'Este campo es requerido'],
         lowercase:true,
         trim: true,
         validate: {
@@ -30,7 +30,7 @@ const user = new mongoose.Schema({
         },
     contraseña:{
                 type:String,
-                require:[true,'Este campo es requerido'],
+                required:[true,'Este campo es requerido'],
                 trim:true}
 })
 

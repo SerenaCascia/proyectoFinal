@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const album = new mongoose.Schema({
     titulo:{
             type:String,
-            require:[true,'Este campo es requerido'],
+            required:[true,'Este campo es requerido'],
             lowercase:true,
             trim: true,},
     descripcion:{
             type:String,
-            require:[true,'Este campo es requerido'],
+            required:[true,'Este campo es requerido'],
             lowercase:true,
             trim: true,
             min: [ 5, 'La descripcion debe contener 5 o más caracteres' ],
@@ -16,7 +16,7 @@ const album = new mongoose.Schema({
         },
     año:{
         type:Number,
-        require:[true,'Este campo es requerido'],
+        required:[true,'Este campo es requerido'],
         trim: true,
         min:[1,'Debe ser mayor a 0']},
     canciones:[{
