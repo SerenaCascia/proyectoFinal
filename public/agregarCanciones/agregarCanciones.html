@@ -9,7 +9,6 @@
   <body>
     <div class="navbar">
       <div id="profile">
-      <img src="" alt="foto_de_perfil">
       <span>Usuario</span>
       </div>
       <!-- menu -->
@@ -18,7 +17,7 @@
           <li><a href="../index.html">Otros albums</a></li>
           <li> <a href="../editarAlbum/editarAlbum.html">Editar album</a></li>
           <li> <a href="#">Añadir canciones</a></li>
-          <li> <a href="../logIn/logIn.html" target="_blank">Log Out</a></li>
+          <li id="logout">Log Out</li>
           </ul>
           </div>
   </div>  
@@ -30,6 +29,7 @@
           <input
             class="input"
             type="text"
+            id="titulo"
             name="nombre_del_album"
             placeholder="Ingresa el nombre del album"
             required /></label
@@ -38,7 +38,8 @@
           >Duracion:
           <input
           class="input"
-            type="number"
+            type="text"
+            id="duracion"
             name="duracion_de_la_cancion"
             placeholder="Ingresa la duracion de la cancion"
             required /></label
@@ -47,12 +48,13 @@
           >Link para escucharla:
           <input
           class="input"
-            type="url"
+            type="text"
+            id="link"
             name="foto_del_disco"
             placeholder="Ingresar la url para escucharla"
             required /></label
         ><br />
-        <button type="submit">Guardar</button> <br> <button type="reset">Cancelar</button>
+        <button type="submit" id="agregar_cancion">Guardar</button> <br> <button type="button" id="cancelar_cancion">Cancelar</button>
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>

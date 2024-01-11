@@ -1,14 +1,16 @@
+const query = window.location.search.split("=");
+const albumId = query[1];
+
+
 
 // Valores ingresados por el usuario
 function getInputValues() {
 
     const tituloInput = document.getElementById('titulo');
-    const añoInput = document.getElementById('año');
     const  descripcionInput= document.getElementById('descripcion_del_album');
-    const imagenInput = document.getElementById('portada');
+    const imagenInput = document.getElementById('imagen');
   
     const tituloValor = tituloInput.value;
-    const añoValor=añoInput.value;
     const descripcionValor = descripcionInput.value;
     const imagenValor = imagenInput.value;
   
@@ -16,26 +18,25 @@ function getInputValues() {
     return {
       titulo: tituloValor,
       descripcion: descripcionValor,
-      año: añoValor,
       portada: imagenValor
     };
   }
 
-//   crear album
-
-const addAlbum = async (e) => {
-    e.preventDefault();       
+//   editar el album
+const changeAlbum = async(e)=>{
+    e.preventDefault()
     const objectToSend = getInputValues()
-    try {
-      await axios.post("/band", objectToSend);
-      swal({
+    try{
+       await axios.put(`/band/${albumId}`,objectToSend)
+       await swal({
         title: 'Album editado!',
-        text: 'El album se creo con exito!',
+        text: 'El album se modifico con exito!',
         icon: 'success',
         confirmButtonText: 'Ok'
-      });
-      window.location.href = `../index.html`;
-    } catch (error) {
+      }) 
+        window.location.href = `../index.html`
+    }
+    catch(error){
         swal({
             title: 'Error!',
             text: `${error.respuesta.data}`,
@@ -43,15 +44,23 @@ const addAlbum = async (e) => {
             confirmButtonText: 'Ok'
           })
     }
-  }
+}
 
-//   boton agregar album
+// boton de editar
 
-const botonAgregar=document.getElementById('añadirAlbum');
-botonAgregar.addEventListener('click',(e)=>{
-    addAlbum(e);
+const botonEditar=document.getElementById('editarAlbum');
+botonEditar.addEventListener('click',(e)=>{
+    changeAlbum(e);
     }
 )
+
+// boton cancelar
+
+const botonCancelar=document.getElementById('cancelarAlbum');
+botonCancelar.addEventListener('click',()=> {
+    window.location.href=`../albums/album.html?album=${albumId}`}
+)
+
 const logout = async () => {
   try {
     await axios.post('../me');

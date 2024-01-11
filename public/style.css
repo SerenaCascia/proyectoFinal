@@ -1,5 +1,6 @@
 body {
     font-family: emilia;
+    background-color: #94CED8;
 }
 h1{
     font-family: titulo;
@@ -178,6 +179,7 @@ a:active{
 .base{
 padding-top: 10px;
  padding-left: 220px;
+ background-color: #94CED8;
 }
 
 .containerAlbums{

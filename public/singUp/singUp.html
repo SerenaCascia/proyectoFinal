@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emilia | Registrarse</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body id="fondoRegistro">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body id="fondoRegistro">
     <div class="cajaEstiloRetro positionRelative">
-    <h3>Registro</h3>
-    <form action="" method="post" class="formularios">
-        <label>Nombre: <br> <input class="input" type="text" name="Nombre" placeholder="Ingrese su nombre" required></label> <br>
-        <label>Apellido: <br> <input class="input" type="text" name="Apellido" placeholder="Ingrese su apellido" required></label> <br>
-        <label>Email: <br><input class="input" type="email" name="email" placeholder="mail@gmail.com" required></label> <br>   
-        <label>Contraseña: <br><input class="input" type="password" name="Contraseña" placeholder="" required></label> <br>
-        <button type="submit">
-            Enviar
-            <div class="arrow-wrapper">
-                <div class="arrow"></div>
-        
-            </div>
-        </button>        
-    </form>
+      <h3>Registro</h3>
+      <form action="" method="post" class="formularios">
+        <label
+          >Nombre: <br />
+          <input
+            class="input"
+            type="text"
+            id="nombre"
+            name="Nombre"
+            placeholder="Ingrese su nombre"
+            required
+        /></label>
+        <p id="corto_nombre"></p>
+        <br />
+        <label
+          >Apellido: <br />
+          <input
+            class="input"
+            type="text"
+            id="apellido"
+            name="Apellido"
+            placeholder="Ingrese su apellido"
+            required
+        /></label>
+        <p id="corto_apellido"></p>
+        <br />
+        <label
+          >Email: <br /><input
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="mail@gmail.com"
+            required
+        /></label>
+        <br />
+        <label
+          >Contraseña: <br /><input
+            class="input"
+            type="password"
+            id="contraseña"
+            name="Contraseña"
+            placeholder=""
+            required
+        /></label>
+        <br />
+        <button type="submit" id="crearUsuario">
+          Enviar
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </form>
     </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/992b0df65a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./singUp.js"></script>
+  </body>
 </html>
